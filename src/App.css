@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+body {
+  width: 1340px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 0;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table-container {
   display: flex;
   flex-direction: column;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.table-header, .table-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-cell {
+  padding: 8px;
+  text-align: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  border-right: 1px solid #ddd;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+
+.table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  gap: 5px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.action-buttons button {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.arrow-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
   color: white;
+  border: none;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-.App-link {
-  color: #61dafb;
+.arrow-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Editable input styling */
+.table-cell input {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
 }
